@@ -1,0 +1,15 @@
+import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SellService {
+
+
+  constructor(private http:HttpClient) { }
+
+  sellersignup(data:any){
+  this.http.post("http://localhost:3000/seller",data)
+}
+}
