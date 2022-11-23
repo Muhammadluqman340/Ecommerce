@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SellService } from 'src/app/service/sell.service';
+
 
 @Component({
   selector: 'app-seller-auth',
@@ -8,12 +8,12 @@ import { SellService } from 'src/app/service/sell.service';
 })
 export class SellerAuthComponent {
 
-  constructor(private sell:SellService){}
+  constructor(){}
     showLogin= false
 
   signUp(data:object):void{
   console.log(data);
-  this.sell.sellersignup(data)
+  // this.sell.sellersignup(data)
 
   }
   Login(data:object){
