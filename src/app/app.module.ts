@@ -9,6 +9,7 @@ import { SellerAuthComponent } from './component/seller-auth/seller-auth.compone
 import { E404ErorrComponent } from './component/e404-erorr/e404-erorr.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SellerHomeComponent } from './component/seller-home/seller-home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     HomeComponent,
     SellerAuthComponent,
-    E404ErorrComponent
+    E404ErorrComponent,
+    SellerHomeComponent
   ],
   imports: [
     BrowserModule,

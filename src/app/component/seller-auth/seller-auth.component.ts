@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SellService } from 'src/app/service/sell.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,13 +10,18 @@ import { Component } from '@angular/core';
 })
 export class SellerAuthComponent {
 
-  constructor(){}
+  constructor(private sell:SellService, private router:Router){}
     showLogin= false
 
-  signUp(data:object):void{
+  signUp(data:object) {
   console.log(data);
   // this.sell.sellersignup(data)
-
+   this.sell.sellersignup(data).subscribe((result:any)=>{
+    console.log(result);
+    if(result){
+      this.router.navigate(['/seller-home'])
+    }
+   })
   }
   Login(data:object){
    console.log(data)

@@ -10,6 +10,6 @@ export class SellService {
   constructor(private http:HttpClient) { }
 
   sellersignup(data:any){
-  this.http.post("http://localhost:3000/seller",data)
+ return this.http.post("http://localhost:3000/seller",data)
 }
 }
